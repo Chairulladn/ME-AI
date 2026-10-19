@@ -1,0 +1,26 @@
+# Kredensial & sesi WhatsApp -- JANGAN PERNAH commit/zip/share ini.
+# Isinya cukup buat orang lain ngambil alih akun WA tanpa scan QR.
+session/
+.env
+
+# Dependency & artefak build
+node_modules/
+
+# Data & file sementara
+database.json
+temp/
+*.log
+
+# Editor/OS
+.vs/
+.DS_Store
+
+# Python virtual environment
+.venv-tts/
+.venv/
+
+# File backup percobaan
+*.backup
+
+# Catatan lokal
+memory/
