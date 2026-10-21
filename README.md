@@ -145,6 +145,4 @@ Always review your code and Git history for exposed credentials before publishin
 
 *Built with curiosity. Improved through experimentation.*
 
-**If you find this project interesting, consider giving it a ⭐!**
-
 </div>
