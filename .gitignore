@@ -2,12 +2,15 @@
 # Isinya cukup buat orang lain ngambil alih akun WA tanpa scan QR.
 session/
 .env
+.env.*
+!.env.example
 
 # Dependency & artefak build
 node_modules/
 
 # Data & file sementara
 database.json
+database.json.*
 temp/
 *.log
 
@@ -24,3 +27,7 @@ temp/
 
 # Catatan lokal
 memory/
+
+# Private backups and process logs
+backups/
+logs/

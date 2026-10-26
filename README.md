@@ -61,22 +61,31 @@ The goal is simple: **make AI interactions more natural, practical, and accessib
 
 ```text
 ME-AI/
-├── index.js
+├── index.js                 # Titik masuk aplikasi
 ├── lib/
-│   ├── ai.js
-│   ├── commands.js
-│   ├── connection.js
-│   ├── database.js
-│   ├── function.js
-│   ├── rateLimiter.js
-│   ├── sticker.js
-│   ├── tts.js
-│   └── voice.js
+│   ├── bot/                 # Koneksi, perintah, identitas WhatsApp
+│   ├── features/            # AI, suara, dan stiker
+│   └── core/                # Database, antrean, batas akses, unduhan
+├── config/
+│   └── ecosystem.config.js  # Konfigurasi PM2
+├── scripts/                 # Setup PM2 dan pemulihan database
+├── tests/                   # Pengujian otomatis; jalankan npm test
+├── .env.example             # Contoh konfigurasi tanpa rahasia
 ├── package.json
 ├── package-lock.json
-├── .gitignore
 └── README.md
 ```
+
+Folder `tests/` berisi pemeriksaan otomatis untuk menemukan kerusakan setelah
+perubahan kode. Folder ini tidak dijalankan saat bot dipakai dan dipisahkan dari
+`lib/` agar kode aplikasi mudah dibaca. Folder `config/` memuat pengaturan,
+sedangkan `scripts/` memuat alat bantu pengelolaan.
+
+Data lokal seperti `.env`, `database.json`, `session/`, `backups/`, `temp/`,
+dan `logs/` tetap berada di root dan diabaikan Git. `node_modules/` serta
+`.venv-tts/` dikelola oleh pemasang dependensi. Jangan memindahkan folder sesi
+atau lingkungan Python secara manual ketika bot berjalan.
+
 
 ## ⚙️ Getting Started
 
